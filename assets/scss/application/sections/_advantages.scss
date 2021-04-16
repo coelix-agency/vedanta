@@ -1,0 +1,100 @@
+.advantages{
+    padding: 50px 0 25px;
+    .container {
+        display: flex;
+    }
+    .hero__brands-wrap {
+        flex-shrink: 0;
+    }
+}
+.advantages-title {
+    margin-right: 25px;
+}
+.advantages-list{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.advantages-item {
+    width: 33.333%;
+    padding-right: 25px;
+}
+.description__title{
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: $secondary-color;
+}
+.description__text{
+    margin-top: 15px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: #4F4F4F;
+}
+
+@media (max-width: 1920px) {
+    .advantages{
+        //padding-top: calc(100px + (100 - 55) * (100vw - 1920px) / (1920 - 768));
+        padding-bottom: calc(25px + (25 - 20) * (100vw - 1920px) / (1920 - 768));
+    }
+    .description__title{
+        font-size: calc(18px + (18 - 14) * (100vw - 1920px) / (1920 - 320));
+    }
+}
+@media (max-width: 1700px) {
+    .advantages{
+        padding: 50px 0 25px;
+    }
+    .advantages-title {
+        margin-right: calc(60px + (60 - 20) * (100vw - 1700px) / (1700 - 768));
+    }
+    .advantages-item {
+        padding-right: calc(45px + (45 - 20) * (100vw - 1700px) / (1700 - 768));
+    }
+    .description__title {
+        font-size: 14px;
+    }
+}
+//@media (max-width: 1368px) {
+//    .advantages {
+//        padding: 60px 0 25px;
+//    }
+//}
+@media (max-width: 1000px) {
+    .advantages {
+        .container {
+            flex-direction: column;
+        }
+    }
+    .advantages-title {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    .advantages-list {
+        .advantages-item:last-child {
+            padding-right: 0;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .advantages {
+        padding: 40px 0 25px;
+        .advantages-list {
+            flex-direction: column;
+            max-width: 400px;
+        }
+        .advantages-item {
+            padding-right: 0;
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .description__text {
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,146 @@
+.banks {
+	background: #F9F9F9;
+}
+.banks-row-wrap {
+	width: 100%;
+	margin: 0 -15px;
+}
+.banks-row {
+	display: flex;
+	width: 100%;
+}
+.banks-item {
+	width: 33.333%;
+	padding: 0 15px;
+	display: flex;
+}
+.banks-elem {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	background: #fff;
+}
+.banks-logo {
+	margin: 42px auto;
+	width: 240px;
+	height: 62px;
+	max-width: 80%;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+.banks-table {
+	margin-bottom: 25px;
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	tr {
+		width: 100%;
+		&:nth-child(odd){
+			background: #F1F1F1;
+		}
+		&:nth-child(even){
+			background: #F9F9F9;
+		}
+		td {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			width: 50%;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 1.5;
+			&:first-child {
+				padding-left: 25px;
+				padding-right: 5px;
+			}
+			&:last-child {
+				padding-right: 25px;
+				text-align: right;
+			}
+		}
+	}
+}
+.banks-btn-wrap {
+	margin: auto 25px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+@media (max-width: 1500px) {
+	.banks-table {
+		margin-bottom: 20px;
+		tr {
+			td {
+				&:first-child {
+					padding-left: 20px;
+				}
+				&:last-child {
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+	.banks-btn-wrap {
+		margin: auto 20px 20px;
+	}
+}
+@media (max-width: 1368px) {
+	.banks-row-wrap {
+		margin: 0 -10px;
+	}
+	.banks-item {
+		padding: 0 10px;
+	}
+}
+@media (max-width: 1268px) {
+	.banks-logo {
+		margin: 18px auto;
+		width: 190px;
+	}
+	.banks-table {
+		margin-bottom: 20px;
+		tr {
+			td {
+				font-weight: normal;
+				font-size: 12px;
+				&:first-child {
+					padding-left: 15px;
+				}
+				&:last-child {
+					padding-right: 15px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1050px) {
+	.banks-row-wrap {
+		margin: 0;
+	}
+	.banks-item {
+		padding: 0 5px;
+	}
+}
+@media (max-width: 900px) {
+	.banks-row-wrap {
+		margin: 0;
+	}
+	.banks-row {
+		flex-wrap: wrap;
+		.banks-item:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	.banks-item {
+		width: 100%;
+	}
+}
+@media (max-width: 768px) {
+	.banks-logo {
+		margin: 24px auto;
+		width: 200px;
+	}
+}

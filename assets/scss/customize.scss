@@ -1,0 +1,86 @@
+@import "base/config";
+@import "base/mixins";
+
+.hidden{
+    display: none;
+}
+.google{
+    &-map{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+.woocommerce{
+    &-ordering{
+        display: none;
+    }
+}
+.berocket{
+    &_aapf_widget-title_div{
+        min-height: auto;
+    }
+    &-radio{
+        input{
+            display: none;
+        }
+    }
+}
+
+@keyframes opacity-ellipsis {
+    0% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
+    100% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+    }
+}
+.btn__loading {
+    i {
+        animation-name: opacity-ellipsis;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+
+        &:nth-child(2){
+            animation-delay: 100ms;
+            animation-delay: 100ms;
+        }
+        &:nth-child(3){
+            animation-delay: 300ms;
+            animation-delay: 300ms;
+        }
+    }
+}
+
+.wpcf7{
+    .screen-reader-response{
+        display: none !important;
+    }
+    &-response{
+        &-output{
+            display: none !important;
+        }
+    }
+    &-not{
+        &-valid{
+            border-color: #e53e3e !important;
+
+            &-tip{
+                white-space: nowrap;
+                font-size: 11px;
+                color: #e53e3e;
+                display: block;
+                margin: 0 0 12px 0;
+            }
+        }
+    }
+}
+
+.hide_products{
+    opacity: .4;
+}

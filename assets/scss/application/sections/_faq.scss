@@ -1,0 +1,134 @@
+.faq {
+	padding: 120px 0;
+	.container {
+		display: flex;
+	}
+	.section-left-subtitle {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+}.answer
+.faq-left-bottom {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+.faq-left-bottom-title {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 15px;
+}
+.faq-left-bottom-text,
+.answer-item {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.faq-question-list {
+	background: #f9f9f9;
+	border-radius: 5px;
+	overflow: hidden;
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+.callback-phone {
+	margin-top: 44px;
+}
+.question,
+.answer {
+	padding: 28px;
+}
+.answer {
+	font-size: 16px;
+	padding-top: 0;
+	padding-left: 20px;
+}
+.question {
+	position: relative;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.3;
+	transition: color .3s linear;
+	&:hover, &.active {
+		color: $primary-color;
+		svg path {
+			fill: $primary-color;
+		}
+	}
+	&.active {
+		svg {
+			transform: rotate(-45deg);
+		}
+	}
+	svg {
+		flex-shrink: 0;
+		margin-left: 20px;
+		transition: transform .2s linear;
+	}
+}
+.answer-item {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .3s linear;
+}
+@media (max-width: 1700px) {
+	.faq {
+		padding: 80px 0;
+	}
+}
+@media (max-width: 1168px) {
+	.faq {
+		.question {
+			font-size: 16px;
+		}
+		.answer {
+			font-size: 14px;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.faq {
+		padding: 60px 0;
+		.container {
+			flex-direction: column;
+		}
+		.faq-left-bottom {
+			display: none;
+		}
+		.section-left-subtitle {
+			font-size: 14px;
+		}
+		.question {
+			padding: 20px 15px;
+			font-size: 14px;
+		}
+		.answer {
+			font-size: 12px;
+		}
+		.faq-question-list:not(:last-child) {
+			margin-bottom: 12px;
+		}
+		.mobile-clone {
+			margin-top: 40px;
+			.faq-left-bottom {
+				display: flex;
+				flex-direction: column;
+				max-width: 100%;
+			}
+			.callback-phone {
+				margin: 40px auto 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "mark": "Kia",
+        "models": ["Avella", "Besta", "Cadenza", "Carens", "Carnival", "Ceed", "Cerato", "Clarus", "Concord", "Credos", "Forte", "Grand Sportage", "Joice", "K3", "K5", "K7", "K9", "Koup", "Magentis", "Mohave", "Niro", "Opirus", "Optima", "Picanto", "Pride", "Rio", "Sedona", "Sephia", "Shuma", "Sorento", "Soul", "Spectra", "Sportage", "Stinger", "Stonic", "Telluride", "Venga"]
+    },
+    {
+        "mark": "Hyundai",
+        "models": ["Accent","Atos", "Avante", "Azera", "Country", "Coupe", "Creta", "Elantra", "Equus", "Excel", "Galloper", "Genesis", "Gets", "Grand Santa FE", "Grand Starex", "Grandeur", "i10", "i20", "i30", "i40", "Ioniq", "ix20", "ix35", "ix55(Veracruz)", "Kona", "Lantra", "Matriz", "Palisade", "Pony", "S-coupe", "Santa FE", "Santamo", "Solaris", "Sonata", "Stelar", "Terracan", "Tiburon", "Trajet", "Tucson", "Veloster", "XG"]
+    }
+]

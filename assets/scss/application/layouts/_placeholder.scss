@@ -1,0 +1,12 @@
+.lead-section,
+.customs-calc {
+    input::-webkit-input-placeholder { color: $secondary-color; }
+    input::-moz-placeholder { color: $secondary-color; }
+    input { color: $secondary-color; }
+    textarea::-webkit-input-placeholder { color: $secondary-color; }
+    textarea::-moz-placeholder { color: $secondary-color; }
+    textarea, select { color: $secondary-color; }
+
+
+
+}

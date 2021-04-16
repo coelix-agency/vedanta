@@ -1,0 +1,21 @@
+#contacts-page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	.page-wrap {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		main {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			.map {
+				flex-grow: 1;
+			}
+		}
+	}
+	footer {
+		margin-top: auto;
+	}
+}

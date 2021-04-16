@@ -1,0 +1,27 @@
+//.goods-post {
+//	.section-left-col_header {
+//	}
+//	.go-catalog {
+//		padding: 25px 65px;
+//		border-radius: 5px;
+//		border: 2px solid $primary-color;
+//		margin-top: auto;
+//		transition: background-color .2s linear, color .2s linear;
+//		&:hover {
+//			background: $primary-color;
+//			color: #fff;
+//		}
+//	}
+//}
+@media (max-width: 600px) {
+	.goods-post {
+		.section-left-col_header {
+			margin-bottom: 30px;
+		}
+		.section-left-col {
+			.go-catalog {
+				display: none;
+			}
+		}
+	}
+}

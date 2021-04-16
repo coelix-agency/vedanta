@@ -1,0 +1,99 @@
+$primary-color: #76B82A; //green
+$hover-primary: #66a023;
+$secondary-color: #333333; //black
+$dark-color: #1D1D1B;
+$silver-bg: #F9F9F9;
+$outstock-orange: #F3CB3E;
+
+input {
+	font-size: 14px;
+}
+
+svg path{
+	transition: fill .2s linear;
+}
+a {
+	transition: color .2s linear;
+}
+%range {
+	position: relative;
+	height: 2px;
+	margin-bottom: 10px;
+	margin-right: 12px;
+	background: silver;
+	border: none;
+	//.range-line, .ui-slider-range,
+	.noUi-connect,
+	.ui-slider-range {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		//width: 60%;
+		z-index: 1;
+		background: $primary-color;
+		border: none;
+	}
+	//.range-handler, .ui-slider-handle,
+	.noUi-handle,
+	.ui-state-default, .ui-widget-content .ui-state-default {
+		font-size: 14px;
+		position: absolute;
+		z-index: 5;
+		outline: 0!important;
+		background: #fff;
+		cursor: pointer;
+		top: 50%;
+		transform: translateY(-50%);
+		border: 6px solid $primary-color;
+		height: 20px;
+		width: 20px;
+		border-radius: 50%;
+		&:before, &:after {
+			content: none;
+		}
+	}
+	.range-min,
+	.slide .berocket_filter_slider .ui-slider-handle:first-child{
+		//left: 0%;
+	}
+	.range-max,
+	.slide .berocket_filter_slider .ui-slider-handle:last-child{
+		//left: 60%;
+	}
+}
+%inputs {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 25px;
+	& > input {
+		display: block;
+		width: calc(50% - 4px);
+		border-radius: 2px;
+		border: 1px solid #DADCE0;
+		padding: 10px;
+		text-align: center;
+		font-weight: 500;
+		font-size: 16px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.left, .right {
+		width: calc(50% - 4px);
+		input {
+			width: 100%;
+			border-radius: 2px;
+			border: 1px solid #DADCE0;
+			padding: 10px;
+			text-align: center;
+			font-weight: 500;
+			font-size: 16px;
+		}
+		.right input {
+			margin-right: 0;
+		}
+	}
+}

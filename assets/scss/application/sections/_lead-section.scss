@@ -1,0 +1,143 @@
+.lead-section {
+	padding: 120px 0 80px;
+	.container {
+		display: flex;
+	}
+	.section-left-subtitle {
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 150%;
+	}
+}
+.lead-form {
+	[type="submit"] {
+		margin-top: 30px;
+		width: 268px;
+		height: 75px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $primary-color;
+		color: #fff;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 130%;
+		transition: background-color .2s linear;
+		border-radius: 5px;
+		&:hover {
+			background: $hover-primary;
+		}
+	}
+}
+.lead-form-row {
+	display: flex;
+	margin-bottom: 35px;
+	input, textarea {
+		border-radius: 3px;
+	}
+}
+.lead-form-left {
+	flex-basis: 430px;
+	margin-right: 15px;
+	label {
+		&:not(:last-child) {
+			input {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	input {
+		padding: 28px;
+		border: 1px solid #DADCE0;
+		width: 100%;
+		font-size: 18px;
+	}
+}
+.lead-form-right {
+	flex: 870px 1 1;
+	textarea {
+		padding: 28px;
+		height: 100%;
+		width: 100%;
+		border: 1px solid #DADCE0;
+		font-size: 18px;
+	}
+}
+.lead-form-check-label {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.lead-form-check-label,
+.lead-form-check-label a {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 13px;
+	color: #A4A4A4;
+}
+.lead-form-check-label a {
+	text-decoration-line: underline;
+	margin-left: 6px;
+	&:hover {
+		color: $primary-color;
+	}
+}
+.lead-form-check {
+	margin-right: 12px;
+	line-height: 1.2;
+}
+@media (max-width: 1700px) {
+	.lead-section {
+		padding: 80px 0;
+	}
+}
+@media (max-width: 1368px) {
+	.lead-form-left {
+		input {
+			font-size: 16px;
+		}
+	}
+	.lead-form-right {
+		textarea {
+			font-size: 16px;
+		}
+	}
+}
+@media (max-width: 1000px) {
+	.lead-section {
+		.container {
+			flex-direction: column;
+		}
+	}
+	.lead-form-check-label {
+		justify-content: center;
+	}
+	.lead-form .submit {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (max-width: 768px) {
+	.lead-section {
+		padding: 60px 0;
+		.section-left-subtitle {
+			font-size: 14px;
+		}
+	}
+	.lead-form-row {
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+	.lead-form-left {
+		flex-basis: 100%;
+		margin-right: 0;
+		label:last-child input {
+			margin-bottom: 15px;
+		}
+	}
+}
+@media (max-width: 550px) {
+	.lead-form-check-label {
+		display: inherit;
+	}
+}

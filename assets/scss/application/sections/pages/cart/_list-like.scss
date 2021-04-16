@@ -1,0 +1,409 @@
+.list-like {
+	padding: 25px 0 80px;
+	.wrapper {
+		margin: 0 -15px;
+	}
+	.products {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.car-preview-wrap {
+		width: 33.333%;
+		padding: 0 15px;
+		display: flex;
+		flex-direction: column;
+	}
+	.car-preview-cart {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	.car-preview-cart {
+		background: #fff;
+		.car-info-test {
+			background: transparent;
+			color: $dark-color;
+			border: 1px solid $primary-color;
+			margin-right: 0;
+			margin-left: 18px;
+			&:hover {
+				color: #fff;
+				background: $primary-color;
+			}
+		}
+		.car-image {
+			flex: 0 0 325px;
+			height: 300px;
+		}
+		.car-info {
+			display: flex;
+			flex-grow: 1;
+			flex-wrap: wrap;
+		}
+		.car-info-btns {
+			justify-content: space-between;
+			width: 100%;
+		}
+		.car-info-btn {
+			width: 48%;
+			text-align: center;
+			font-weight: 400;
+			font-size: 16px;
+			padding: 5px;
+		}
+		.car-info-item {
+			flex: 0 0 50%;
+		}
+		.car-info-characteristics {
+			flex-grow: 1;
+		}
+		.car-info-test {
+			margin-left: 0;
+			background: $primary-color;
+			color: #fff;
+			&:hover {
+				background-color: $hover-primary;
+			}
+		}
+	}
+	&.template_outstock {
+		.car-preview-cart .car-info-consultation {
+			display: none;
+		}
+
+	}
+	.container {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+.list-like-title {
+	max-width: 100%;
+	margin-bottom: 40px;
+}
+
+//.car-preview-cart
+.car-preview-list {
+	.car-preview-cart {
+		&:not(:last-child){
+			margin-bottom: 25px;
+		}
+	}
+}
+.car-preview-cart {
+	display: flex;
+	width: 100%;
+	.car-image {
+		flex: 450px 0 0;
+		height: 370px;
+          position: relative;
+          z-index: 1;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+                    position: relative;
+                z-index: 2;
+		}
+	}
+	.car-info {
+		padding: 25px 30px 25px;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: space-between;
+		display: flex;
+	}
+	.car-info-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #f0f0f0;
+
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 140%;
+	}
+	.car-info-price  {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		font-weight: 600;
+		min-width: 100px;
+		line-height: 1.2;
+
+		.old {
+			line-height: 1.1;
+			font-weight: 500;
+			font-size: 18px;
+			color: #c4c4c4;
+			text-decoration: line-through;
+		}
+	}
+	.car-info-characteristics {
+		padding: 25px 0;
+		display: flex;
+		flex-wrap: wrap;
+		//max-width: 500px;
+		color: #4f4f4f;
+	}
+	.car-info-item {
+		flex: 160px 0 0;
+		padding-right: 10px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 150%;
+		img, svg {
+			margin-right: 12px;
+		}
+	}
+	.car-info-btns {
+		display: flex;
+	}
+	.car-info-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 285px;
+		height: 60px;
+		border-radius: 5px;
+		padding: 5px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.3;
+		cursor: pointer;
+		text-align: center;
+		transition: background-color .2s linear;
+	}
+	.car-info-test {
+		margin-right: 18px;
+		background: $primary-color;
+		color: #fff;
+		&:hover {
+			background-color: $hover-primary;
+		}
+	}
+	.car-info-consultation {
+		border: 1px solid $primary-color;
+		&:hover {
+			background-color: $primary-color;
+			color: #fff;
+		}
+	}
+
+    .car-status{
+        $pos: 20px;
+        position: absolute;
+        z-index: 3;
+        left: $pos;
+        top: $pos;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 14px;
+        color: #fff;
+        padding: 9px 13px;
+        white-space: nowrap;
+
+        .svg, img {
+            margin: 0 13px 0 0;
+        }
+
+        &.instock{
+            background-color: $primary-color;
+        }
+
+        &.outstock, &.onbackorder{
+            background-color: $outstock-orange;
+        }
+    }
+}
+
+@media (max-width: 1700px) {
+	.car-preview-cart {
+		.car-info {
+			padding: 12px 30px;
+		}
+		.car-image {
+			flex: 320px 0 0;
+			height: 275px;
+		}
+		.car-info-header {
+			font-size: 18px;
+			padding-bottom: 12px;
+			.old {
+				font-size: 14px;
+			}
+		}
+		.car-info-characteristics {
+			padding: 25px 0 12px;
+		}
+		.car-info-item {
+			svg, img {
+				max-width: 25px;
+				max-height: 25px;
+			}
+		}
+		.car-info-btn {
+			font-weight: 500;
+			font-size: 16px;
+		}
+		//.car-info-btns {
+		//	flex-wrap: wrap;
+		//}
+		//.car-info-test {
+		//	margin-right: 0;
+		//	margin-bottom: 18px;
+		//}
+	}
+}
+@media (max-width: 1468px) {
+	.list-like .car-preview-cart .car-info {
+		padding: 16px;
+	}
+}
+@media (max-width: 1368px) {
+	.list-like {
+		padding: 25px 0 60px;
+		.wrapper {
+			margin: 0 -10px;
+		}
+		.car-preview-wrap {
+			padding: 0 10px;
+
+		}
+		.car-preview-cart {
+			margin-bottom: 20px;
+			.car-image {
+				flex: 0 0 260px;
+				height: 260px;
+			}
+			.car-info-btn {
+				font-size: 14px;
+			}
+			.car-info-characteristics {
+				padding: 20px 0 0;
+			}
+		}
+	}
+}
+@media (max-width: 1300px) {
+	.list-like .car-preview-cart {
+		.car-info-btns {
+			flex-direction: row;
+		}
+		.car-info-btn {
+			margin: 0;
+		}
+	}
+}
+@media (max-width: 1100px) {
+	.list-like.template_outstock .car-preview-cart .car-image {
+		flex: 0 0 450px;
+	}
+}
+@media (max-width: 1000px) {
+	.list-like {
+		.car-preview-wrap {
+			width: 50%;
+		}
+	}
+}
+@media (max-width: 900px) {
+	.list-like.template_outstock .car-preview-cart .car-image {
+		flex: 0 0 350px;
+		height: 220px;
+	}
+}
+@media (max-width: 768px) {
+	.cart-body {
+		padding: 20px 20px 40px;
+	}
+	.list-like {
+		//padding: 25px 0 60px;
+		.wrapper {
+			//margin: 0 -10px;
+		}
+		.car-preview-wrap {
+			//padding: 0 10px;
+		}
+		.car-preview-cart {
+			//margin-bottom: 20px;
+			.car-image {
+				flex: 0 0 220px;
+				height: 220px;
+			}
+			.car-info-btn {
+				font-size: 14px;
+			}
+			.car-info-characteristics {
+				padding: 20px 0 0;
+			}
+		}
+	}
+	.list-like.template_outstock .car-preview-cart .car-image {
+		height: calc(300px + (300 - 200) * (100vw - 768px)/ (768 - 320));
+		flex: 0 0 auto;
+	}
+	.list-like.template_outstock .car-preview-cart {
+		.car-info-btns {
+			margin: 0 auto;
+			width: 100%;
+		}
+		.car-info-test {
+			margin: 0;
+		}
+	}
+	.car-preview-cart {
+		.car-status{
+			$pos: 12px;
+			left: $pos;
+			top: auto;
+			bottom: $pos;
+			font-size: 12px;
+			padding: 6px 10px;
+			.svg, img {
+				margin: 0 6px 0 0;
+			}
+		}
+	}
+}
+@media (max-width: 650px) {
+	.list-like {
+		.wrapper {
+			margin: 0;
+		}
+		.car-preview-wrap {
+			width: 100%;
+			padding: 0;
+		}
+		.car-preview-cart .car-image {
+			height: calc(280px + (280 - 200) * (100vw - 650px)/ (650 - 320));
+			flex: 0 0 auto;
+		}
+	}
+}
+@media (max-width: 550px) {
+	.list-like .car-preview-cart {
+		&.product_cat-avto-v-nalichii {
+			.car-info-btn {
+				width: 48%;
+			}
+		}
+		.car-info-btn {
+			width: 100%;
+		}
+	}
+}
+@media (max-width: 320px) {
+	.list-like.template_outstock .car-preview-cart .car-image {
+		height: 200px;
+	}
+}

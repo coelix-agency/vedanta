@@ -1,0 +1,83 @@
+.breadcrumb {
+	color: #818181;
+	padding: 28px 0;
+	a {
+		display: inline-block;
+		position: relative;
+		color: #818181;
+		padding: 0 15px;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:hover {
+			color: $primary-color;
+		}
+	}
+	.last {
+		color: #fff;
+		padding-left: 15px;
+	}
+	a, .last {
+		font-size: 16px;
+		line-height: 130%;
+	}
+}
+.breadcrumb-list {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+.cart {
+	.breadcrumb {
+		.last {
+			color: $dark-color;
+		}
+	}
+}
+//not for wp
+.breadcrumb-list__link {
+	display: inline-block;
+	padding-right: 34px;
+	position: relative;
+	color: #818181;
+	&:after {
+		position: absolute;
+		content: url('../images/icons/breadcrumb-arrow.svg');
+		bottom: 2px;
+		right: 16px;
+	}
+	&:hover {
+		color: $primary-color;
+	}
+}
+//not for wp
+@media (max-width: 1700px) {
+	.breadcrumb {
+		a, .last {
+			font-size: 14px;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.cart {
+		.breadcrumb {
+			padding: 28px 0 0 0;
+		}
+	}
+	.breadcrumb {
+		.container {
+			overflow-x: auto;
+		}
+	}
+	.breadcrumb-list {
+		padding-bottom: 5px;
+		width: max-content;
+	}
+}
+@media (max-width: 550px) {
+	.cart {
+		.breadcrumb {
+			padding: 20px 0 0 0;
+		}
+	}
+}
